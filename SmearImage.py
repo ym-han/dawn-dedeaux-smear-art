@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 from PIL import Image, ImageDraw, ImageFile
+# YM: looks like Pillow is the more actively maintained version of PIL. The two cannot co-exist
 
 from collections import namedtuple
 
@@ -10,6 +11,14 @@ from collections import namedtuple
 # block_corner is the corner of the block, relative to the coords of the original image
 # block_center_rel is the center of the block, relative to (0, 0) being at the center of the image
 # dist_from_img_center is the distance from the image center, where (0,0) is the image center
+
+
+# relevant tuts:
+# === https://scipy-lectures.org/advanced/image_processing/
+# https://python-pillow.org/
+
+
+
 PixelBlock = namedtuple('PixelBlock', ['pixels', 'avg_color', 'block_corner', 'block_center_rel', 'dist_from_img_center'])
 
 
